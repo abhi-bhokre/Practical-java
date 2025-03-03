@@ -1,0 +1,1216 @@
+Q.1 Write a program in java to print Hello World.
+
+code : 
+
+import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+    System.out.println("Hello World !");
+
+}
+}
+
+Q.2 Write a program in java uses Of Different data types.
+
+code : 
+
+import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+        int a = 29;
+        char ch = 'S';
+        float c = 29.76f;
+        boolean N = true;
+        long d = 893938393;
+        double l = 98.3;
+        
+
+    System.out.println("Num is : " + a);
+    System.out.println("char is : " + ch);
+    System.out.println("float is : " + c);
+    System.out.println("long is : " + d);
+    System.out.println("double is : " + l);
+    System.out.println("boolean is : " + N);
+
+}
+}
+
+output : 
+Num is : 29
+char is : S
+float is : 29.76
+long is : 893938393
+double is : 98.3
+boolean is : true
+
+
+Q.3 Conditional Statements 
+
+1. write a program in java to check whether the given number is odd or even using Conditional operators.
+
+code : 
+
+import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+        int num = 29;
+
+      if(num % 2 == 0){
+        System.out.println(num + " : Is Even");
+      }else{
+        System.out.println(num + " : Is Odd");
+      }
+
+ }
+}
+
+output : 
+29 : Is Odd
+
+2. write a program in java to check whether the given number is positive or 
+   negative using if Statement.
+
+code : 
+
+import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+        int num = -29;
+
+      if(num > 0){
+        System.out.println(num + " : Is Positive");
+      }else{
+        System.out.println(num + " : Is Negative");
+      }
+
+ }
+}
+
+output : 
+-29 : Is Negative
+
+3. write a program in java to check whether the given year is leap or
+   not using if Statement.
+
+code : 
+
+import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+     Scanner Sc = new Scanner(System.in);
+
+     int year = Sc.nextInt();
+
+     if((year % 4 == 0 && year != 100)|| (year % 400 == 0) ){
+
+        System.out.println(year + " : it is leap year");
+
+     }else{
+
+        System.out.println(year + " : it is not a leap year");
+        
+     }
+
+ }
+}
+
+output : 
+2024 : it is leap year
+
+4. Write a program in java to check maximum among three numbers using nested if.
+
+code : 
+
+import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+     Scanner Sc = new Scanner(System.in);
+
+     int a = 76;
+     int b = 66;
+     int c = 29;
+
+     if(a >= b ){
+        if(a>=c){
+            System.out.println(a + " : is grater than b and c");
+        }else{
+            System.out.println(c + " : is greater than a and b");
+        }
+     }else{
+           System.out.println(b + " : is greater than a and c");
+     }
+
+ }
+}
+
+output : 
+76 : is grater than b and c
+
+5. write a program in java to find the grades of student by accepting marks
+   of four subjects using else if ladder.
+
+   code : 
+
+   import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+     Scanner Sc = new Scanner(System.in);
+
+       int math = 98;
+       int phy = 89;
+       int chem = 92;
+       int bio = 99;
+
+       int marks = (math + phy + chem + bio ) / 4;
+
+      if(marks >= 90){
+        System.out.println("Grade is : A+");
+      }else if(marks >= 80){
+        System.out.println("Grade is : A");
+      }else if(marks >= 70){
+        System.out.println("Grade is : B");
+      }else if(marks >= 50){
+        System.out.println("Grade is : C");
+      }else if(marks>=35){
+        System.out.println("Grade is : D");
+      }else{
+        System.out.println("Fail !");
+      }
+ }
+}
+output : 
+Grade is : A+
+
+6. Write a program in java to accept the month number and display the name of 
+   the month using switch case.
+
+   code :
+
+   import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+     Scanner Sc = new Scanner(System.in);
+
+      int monthNum = 5;
+
+      switch(monthNum){
+        case 1 :
+         System.out.println("January");
+         break;
+         case 2 :
+         System.out.println("February");
+         break;
+         case 3 :
+         System.out.println("March");
+         break;
+         case 4 :
+         System.out.println("April");
+         break;
+         case 5 :
+         System.out.println("May");
+         break;
+         case 6 :
+         System.out.println("June");
+         break;
+         case 7 :
+         System.out.println("July");
+         break;
+         case 8 :
+         System.out.println("August");
+         break;
+         case 9 :
+         System.out.println("September");
+         break;
+         case 10 :
+         System.out.println("Octomber");
+         break;
+         case 11 :
+         System.out.println("November");
+         break;
+         case 12 :
+         System.out.println("December");
+         break;
+         default :
+         System.out.println("No case Matched");
+         break;
+      }
+ }
+}
+
+output : 
+May
+
+
+Q.4 Looping Statement : 
+
+1. write a program in java to find the factorial of given number 
+   by using for loop.
+
+   code : 
+
+   import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+     Scanner Sc = new Scanner(System.in);
+      
+     int num = 5;
+     int fact = 1;
+     for(int i=1; i<=num;i++){
+          fact = fact * i;
+     }
+     System.out.println(" Factorial is : " + fact);
+}
+
+}
+
+output : 
+Factorial is : 120
+
+2. write a program in java to display the numbers from 1 to 10 except 
+   5 using while loop.
+
+  code : 
+
+  import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+     Scanner Sc = new Scanner(System.in);
+      
+     int i = 1;
+
+     while(i <= 10){
+         if(i==5){
+            i++;
+          continue;
+          }
+          System.out.println("i : " + i);
+          i++;
+          
+     }
+}
+}
+
+output : 
+i : 1
+i : 2
+i : 3
+i : 4
+i : 6
+i : 7
+i : 8
+i : 9
+i : 10
+
+3. write a program in java to display square numbers of 1 to 5 using 
+   do-while loop.
+
+   code : 
+
+   import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+     Scanner Sc = new Scanner(System.in);
+      
+     int i = 1;
+
+     do{
+          int square = i * i;
+          System.out.println("Square is : " + square);
+          i++;
+     }while(i<=5);
+}
+}
+
+output :
+Square is : 1
+Square is : 4
+Square is : 9
+Square is : 16
+Square is : 25
+
+4.WAP in java to display the following output using nested for loop :
+
+input : 
+1
+1 2 
+1 2 3
+1 2 3 4
+
+code : 
+
+import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+     Scanner Sc = new Scanner(System.in);
+      int n = 4;
+     for(int i=1;i<=n; i++){
+          for(int j=1; j<=i; j++){
+             System.out.print(j + " ");
+          }
+          System.out.println();
+     }
+}
+}
+
+5. write a program in java to display the following output using 
+   nested while loop.
+
+   input : 
+   1
+   2 2 
+   3 3 3
+   4 4 4 4
+
+   code : 
+
+   import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+     Scanner Sc = new Scanner(System.in);
+      
+     int i =1;
+     while(i<=4){
+          int j=1;
+          while(j<=i){
+               System.out.print(i + " ");
+               j++;
+          }
+          System.out.println();
+          i++;
+     }
+}
+}
+
+6. WAP in java to display the following output using 
+   nested do-while loop.
+
+   input :
+   1
+   2 3
+   4 5 6 
+   7 8 9 10
+
+   code :
+
+   import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+     Scanner Sc = new Scanner(System.in);
+      
+     int number = 1; 
+     int i = 1;
+     do{
+          int j = 1;
+          do{
+            System.out.print(number + " ");
+            number++;
+            j++;
+          }while(j<=i);
+          i++;
+          System.out.println();
+     }while(i<=4);
+}
+}
+
+Q.5 Arrays.
+
+1.write a program in java to search an element in an array.
+
+code : 
+
+import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+     Scanner Sc = new Scanner(System.in);
+      
+     int arr[] = {1 , 2 , 3 , 4 , 5};
+
+     int target = 4;
+
+     for(int i=0; i<arr.length; i++){
+          if(arr[i] == target){
+               System.out.println("target is : " + arr[i]);
+          }
+     }
+}
+}
+
+output :
+target is : 4
+
+
+2.WAP in java to sort an array in asscending order.
+
+code :
+import java.util.*;
+
+class Practical{
+
+     public static void Sort(int arr[]){
+          int n = arr.length;
+
+          for(int i=0;i<n-1; i++){
+               for(int j = 0; j<n-i-1; j++){
+                    if(arr[j]> arr[j+1]){
+                         int temp = arr[j];
+                         arr[j] = arr[j+1];
+                         arr[j+1] = temp; 
+                    }
+               }
+          }
+     }
+
+public static void main(String args[]){
+
+     Scanner Sc = new Scanner(System.in);
+      
+     int arr[] = {72, 98 , 97 , 76 , 29};
+      
+      Sort(arr);
+      for(int i = 0; i<arr.length; i++){
+          System.out.print(arr[i] + " ");
+      }
+}
+
+}
+
+output : 
+29 72 76 97 98 
+
+3. WAP in java to add two matrices of size 3 x 3.
+
+code :
+import java.util.*;
+
+class Practical{
+
+     
+public static void main(String args[]){
+
+     Scanner Sc = new Scanner(System.in);
+      
+    int matrix1[][] = {
+     {1,2,3},
+     {4,5,6},
+     {7,8,9}
+    };
+
+    int matrix2[][] = {
+     {1,2,3},
+     {4,5,6},
+     {7,8,9}
+    };
+     
+     int sumMatrics[][] = new int[3][3];
+     for(int i=0;i<3;i++){
+          for(int j=0;j<3;j++){
+               sumMatrics[i][j] = matrix1[i][j] + matrix2[i][j];
+          }
+     }
+
+     for(int i=0; i<3; i++){
+          for(int j=0;j<3;j++){
+               System.out.print(sumMatrics[i][j]+ " ");
+          }
+          System.out.println();
+     }
+      
+}
+}
+
+output : 
+2 4 6 
+8 10 12
+14 16 18
+
+Q.6 WAP in java for this keyword.
+
+code : 
+
+import java.util.*;
+
+class Practical{
+     
+
+public static void main(String args[]){
+
+    person p1 = new person("Abhi" , 20);
+
+    }
+}
+
+class person{
+     String name;
+     int age;
+
+     person(String name , int age){
+          this.name = name;
+          this.age = age;
+          System.out.println("Name is : " + this.name);
+          System.out.println("age is : " + this.age);
+
+     }
+
+}
+
+Q.7 Write a program in java for method overloading.
+
+code: 
+
+import java.util.*;
+
+class Practical{
+     
+     public static void add(int a , int b){
+       
+       int result = a + b;
+       System.out.println("Add of 2 numbers is  : " + result);
+     }
+      
+     public static void add(int a , int b , int c){
+
+          int result = a + b + c;
+        System.out.println("Add of 3 numbers is : " + result);    
+     } 
+
+public static void main(String args[]){
+
+   Practical p = new Practical();
+   p.add(29 , 76);
+   p.add(72 , 97 , 98);
+      
+}
+
+}
+
+output : 
+Add of 2 numbers is  : 105
+Add of 3 numbers is : 267
+
+Q.8 Static members : 
+
+1. write a program in java for static variable.
+
+code : 
+
+import java.util.*;
+
+class Practical{
+     
+     static int num = 29;   //static variable
+      
+     public static void print(){
+
+        System.out.println("static variable is  : " + num);    
+     } 
+
+public static void main(String args[]){
+
+   Practical p = new Practical();
+   p.print();
+      
+}
+
+}
+
+output : static variable is  : 29
+
+2. write a program in java for static method.
+
+code : 
+
+import java.util.*;
+
+class Practical{
+     
+    static int multiplication(int a , int b){     //static method
+      
+      int multi = a * b;
+
+      return multi;
+    }
+
+public static void main(String args[]){
+
+   Practical p = new Practical();
+   
+   System.out.println("Multiply of 2 number is : " + p.multiplication(2 , 3));
+      
+}
+
+}
+
+output : 
+Multiply of 2 number is : 6
+
+Q.9 Constructor.
+
+1. Write a program in java for default Constructor.
+
+code : 
+
+import java.util.*;
+
+class Practical{
+     
+    Practical(){ //default constructor
+      System.out.println("Hello , Abhi ! I am default constructor");
+    }
+
+public static void main(String args[]){
+
+   Practical p = new Practical();
+      
+}
+
+}
+
+output : Hello , Abhi ! I am default constructor
+
+2. write a program in java for parameterized Constructor.
+
+code : 
+import java.util.*;
+
+class Practical{
+     
+    Practical(int num1 , int num2){ //parameterized constructor
+     
+     if(num1 >= num2){
+     System.out.println(num1 + " : is  largest");
+    }else{
+     System.out.println(num2 +  " : is largest");
+    }
+    }
+
+
+public static void main(String args[]){
+
+   Practical p = new Practical(29 , 72);
+      
+}
+ }
+
+ output : 72 : is largest
+
+Q.10 Inheritance.
+
+1. write a program in java for single Inheritance.
+
+code :
+
+import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+ Mammals m = new Mammals();
+ m.work();
+ m.Dog();
+ m.cat();
+
+}
+}
+    
+class Animal{
+     void work(){
+      System.out.println("following Mammals do their work : ");
+     }
+}
+
+class Mammals extends Animal{
+
+     void Dog(){
+      System.out.println("dog are barks to thiefs");
+     }
+
+     void cat(){
+      System.out.println("cat drink the milk");
+     }
+} 
+
+output : 
+following Mammals do their work : 
+dog are barks to thiefs
+cat drink the milk
+
+2. write a program in java for multilevel Inheritance.
+code :
+
+import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+Cat c = new Cat();
+c.Animal();
+c.dog();
+c.cat();
+
+}
+}
+    
+class Mammals{
+     void Animal(){
+          System.out.println("following Mammals talks like :");
+     }
+}
+
+class Dog extends Mammals{
+     void dog(){
+          System.out.println("Dog barks ");
+     }
+}
+
+class Cat extends Dog{
+     void cat(){
+       System.out.println("cat Meows");
+     }
+}
+
+output :
+following Mammals talks like :
+Dog barks 
+cat Meows
+
+3.write a program in java for hierarchical Inheritance.
+
+code : 
+
+import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+Dog d = new Dog();
+d.print();
+d.dog();
+Cat c = new Cat();
+c.print();
+c.cat();
+Goat g = new Goat();
+g.print();
+g.goat();
+
+}
+}
+    
+class Animal{
+     void print(){
+          System.out.print("Hii i am a Animal = ");
+     }
+}
+
+class Dog extends Animal{
+     void dog(){
+          System.out.println("dog");
+     }
+}
+
+class Cat extends Animal{
+     void cat(){
+          System.out.println("Cat");
+     }
+}
+
+class Goat extends Animal{
+     void goat(){
+          System.out.println("Goat");
+     }
+}
+
+output : 
+Hii i am a Animal = dog
+Hii i am a Animal = Cat
+Hii i am a Animal = Goat
+
+Q.11 Write a program in java for method overriding.
+
+code :
+import java.util.*;
+
+class Practical{
+
+public static void main(String args[]){
+
+Dog d = new Dog();
+d.move();
+d.eat();
+d.bark();
+}
+}
+    
+class Animal{
+
+     void move(){
+           System.out.println("Animal is moving .");
+     }
+     void eat(){
+          System.out.println("Animal is eating .");
+     }
+}
+
+class Dog extends Animal{
+     void move(){
+          System.out.println("dog is running.");
+     }
+     void bark(){
+           System.out.println("dog is barking.");
+     }
+}
+
+output :
+dog is running.
+Animal is eating .
+dog is barking.
+
+Q.12 write a program in java for demonstration of final variable , 
+     method and final class.
+
+     code :
+
+import java.util.*;
+
+class Practical{
+public static void main(String args[]) {
+        Animal a = new Animal();
+        a.displayAge();
+     
+    }
+}
+    
+// Final class
+final class Animal {
+    
+    // Final variable
+    final int age = 20;
+    
+    // Final method
+    final void displayAge() {
+        System.out.println("Age is : " + age);
+    }
+}
+
+output : Age is : 20
+
+Q.13 write a program in java for demonstration of defining and implementing
+     interface.
+
+code : 
+import java.util.*;
+
+class Practical{
+public static void main(String args[]) {
+      
+      Person p = new Person();
+      p.eat();
+      p.sleep();
+     
+    }
+}
+    
+//defining interface
+interface work{
+void eat();
+void sleep();
+}
+
+//implementing interface
+class Person implements work{
+
+     public void eat(){
+          System.out.println("person eats fruits.");
+     }
+
+     public void sleep(){
+          System.out.println("person sleeps at night.");
+     }
+}
+
+output :
+person eats fruits.
+person sleeps at night.
+
+Q.14 Write a program in java to demonstrate creating and accessing package.
+
+code : 
+
+mypackage folder's code :
+
+package mypackage;
+
+public class myClass{
+    public void displayMessage(){
+          System.out.println("hello from myClass inside hello package!");
+    }
+}
+
+
+main function code : 
+import mypackage.myClass;
+
+class Practical{
+
+public static void main(String args[]) {
+
+     myClass obj = new myClass();
+     obj.displayMessage(); 
+     
+    }
+}
+
+output :
+hello from myClass inside hello package!
+
+Q.15 Exception.
+
+1. Write a program in java for Exception.
+
+code :
+import java.util.*;
+
+class Practical{
+
+   public static int divide(int a , int b){
+      return a / b;
+   }
+
+public static void main(String args[]) {
+
+    try{
+     int result = divide(10 , 2);
+     System.out.println("Result : " + result);
+    }catch(ArithmeticException e){
+      System.out.println("Exception Caught : " + e.getMessage());
+    }finally{
+      System.out.println("This block is always executed");
+    }
+     
+    }
+}
+
+output :
+Result : 5
+This block is always executed
+
+2. Write a program in java for multiple catch blocks.
+
+code : 
+import java.util.*;
+
+class Practical{
+
+public static void main(String args[]) {
+
+    try {
+
+            int[] numbers = {1, 2, 3};
+            System.out.println(numbers[5]);
+            
+           
+            int result = 10 / 0;
+            System.out.println("Result: " + result);
+            
+            String str = null;
+            System.out.println(str.length());
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Exception caught: ArrayIndexOutOfBoundsException. " + e.getMessage());
+        } catch (ArithmeticException e) {
+            System.out.println("Exception caught: ArithmeticException. " + e.getMessage());
+        } catch (NullPointerException e) {
+            System.out.println("Exception caught: NullPointerException. " + e.getMessage());
+        } finally {
+            System.out.println("This block is always executed.");
+        }
+    }
+     
+    
+}
+
+output : 
+Exception caught: ArrayIndexOutOfBoundsException. Index 5 out of bounds for length 3
+This block is always executed.    
+
+
+3. Write a program in java for finally block.
+
+code :
+
+import java.util.*;
+
+class Practical{
+
+public static int multiply(int a , int b){
+     return a * b;
+}
+
+public static void main(String args[]) {
+
+try{
+ int result = multiply(2 , 4);
+ System.out.println("Multiplication is : " + result);
+}catch(ArithmeticException e){
+System.out.println("Exception Caught : " + e.getMessage());
+}finally{
+ System.out.println("block is execute");
+}
+
+}
+    
+}
+
+output :
+Multiplication is : 8
+block is execute
+
+Q.16 String classes.
+
+1. Write a program in java to String concatenate , convert String to
+   upper Case and lower case , find subString , compare two Strings , 
+   find length of String using String class.
+
+   code :
+
+   import java.util.*;
+
+class Practical{
+
+public static void main(String args[]) {
+  //concatenate
+  String str1 = "hello";
+  String str2 = "world";
+  String concatenate = str1 + " " + str2;
+  System.out.println("Concatenated String : " + concatenate);
+
+  //uppercase
+  String upCase = concatenate.toUpperCase();
+  System.out.println("Upper Case String : " + upCase);
+
+  //lowercase
+  String lowCase = concatenate.toLowerCase();
+  System.out.println("lower Case String : " + lowCase);
+
+  //substring
+  String substring = concatenate.substring(0 , 5);
+  System.out.println("Substring : " + substring);
+
+  //compare 2 string
+  String str3 = "hello world";
+  boolean equal = concatenate.equals(str3);
+  System.out.println("are the string equal ? " + equal);
+
+  //length
+  int length = concatenate.length();
+  System.out.println("Length of String :  " + length);
+}
+    
+}
+
+output :
+Concatenated String : hello world
+Upper Case String : HELLO WORLD
+lower Case String : hello world
+Substring : hello
+are the string equal ? true
+Length of String :  11
+
+
+2. Write a program in java to append String , insert String , set length 
+   of String , modify nth character in the String using StringBuffer class.
+
+   code : 
+
+import java.util.*;
+
+class Practical{
+
+public static void main(String args[]) {
+ 
+        // Creating a StringBuffer object
+        StringBuffer sb = new StringBuffer("Hello");
+        
+        // Appending a String
+        sb.append(" World");
+        System.out.println("After appending: " + sb);
+        
+        // Inserting a String
+        sb.insert(5, " Beautiful");
+        System.out.println("After inserting: " + sb);
+        
+        // Setting the length of the String
+        sb.setLength(12);
+        System.out.println("After setting length: " + sb);
+        
+        // Modifying the nth character in the String
+        sb.setCharAt(6, 'B');
+        System.out.println("After modifying 7th character: " + sb);
+}
+    
+}
+
+output : 
+After appending: Hello World
+After inserting: Hello Beautiful World
+After setting length: Hello Beauti
+After modifying 7th character: Hello Beauti
+
+Q.17 write a program in java to create Applet.
+
+code : 
+
+Q.18 write a program in java to demonstrate Applet param-tag.
+
+code :
+
+Q.19 write a program in java to demonstrate reading from and 
+     writing in to the files.
+
+code :
