@@ -1206,11 +1206,41 @@ Q.17 write a program in java to create Applet.
 
 code : 
 
+
+
 Q.18 write a program in java to demonstrate Applet param-tag.
 
 code :
+
+
 
 Q.19 write a program in java to demonstrate reading from and 
      writing in to the files.
 
 code :
+
+input.txt file :
+
+Hii, i am a input.txt file.
+
+
+Read.java code : 
+
+import java.io.File;
+import java.util.Scanner;
+
+public class Read {
+    public static void main(String args[]) throws Exception{
+        //Reading  in File
+        File file = new File("input.txt");
+        Scanner sc = new Scanner(file);
+
+        //Writing in file
+        while (sc.hasNextLine()) {
+            System.out.println(sc.nextLine());
+        }
+        sc.close();
+    }
+}
+
+output : Hii, i am a input.txt file.
